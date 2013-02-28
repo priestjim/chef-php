@@ -73,7 +73,8 @@ default['php']['ini_settings'] = {
   'cgi.fix_pathinfo' => '1',
   'upload_max_filesize' => '32M',
   'date.timezone' => 'Europe/Athens',
-  'session.cookie_httponly' => '0'
+  'session.cookie_httponly' => '0',
+  'safe_mode' => 'Off'
 }
 
 default['php']['apc']['shm_size'] = "128M"
