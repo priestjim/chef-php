@@ -335,7 +335,7 @@ allow_call_time_pass_reference = Off
 
 ; Safe Mode
 ; http://php.net/safe-mode
-safe_mode = Off
+safe_mode = <%= node['php']['ini_settings']['safe_mode'] %>
 
 ; By default, Safe Mode does a UID compare check when
 ; opening files. If you want to relax this to a GID compare,

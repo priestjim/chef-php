@@ -26,5 +26,6 @@ template "#{node['php']['apache_conf_dir']}/php.ini" do
 	owner "root"
 	group "root"
 	mode 00644
+  notifies :restart, "service[apache2]"
 	only_if { platform?("ubuntu", "debian") }
 end
