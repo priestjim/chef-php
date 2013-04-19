@@ -21,12 +21,4 @@
 # limitations under the License.
 #
 
-pkg = value_for_platform_family(
-    [ "rhel", "fedora" ] => "php-mysqlnd",
-    "debian" => "php5-mysqlnd"
-)
-
-
-package pkg do
-  action :install
-end
+package node[:php][:mysql_module] 
