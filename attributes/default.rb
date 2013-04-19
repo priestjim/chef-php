@@ -33,6 +33,7 @@ when "rhel", "fedora"
   default['php']['pear_dir']      = '/usr/share/pear'
   default['php']['session_dir']   = '/var/lib/php/session5'  
   default['php']['upload_dir']    = '/var/lib/php/uploads'
+  default['php']['mysql_module']    = 'php-mysql'
 when "debian"
   default['php']['conf_dir']      = '/etc/php5/cli'
   default['php']['apache_conf_dir'] = '/etc/php5/apache2'
@@ -41,6 +42,7 @@ when "debian"
   default['php']['pear_dir']      = '/usr/share/php'
   default['php']['session_dir']   = '/var/lib/php5/session5'  
   default['php']['upload_dir']    = '/var/lib/php5/uploads'
+  default['php']['mysql_module']    = 'php5-mysqlnd'
 else
   default['php']['conf_dir']      = '/etc/php5/cli'
   default['php']['apache_conf_dir'] = '/etc/php5/apache2'
