@@ -69,4 +69,6 @@ end
 # Since we do not have any pool files we do not attempt to start the service
 service pkgname do
   action :enable
+  supports [:start, :restart, :stop]
+  provider Chef::Provider::Service::Upstart if (node["platform"] == "ubuntu" && node["platform_version"].to_f >= 9.10)
 end
