@@ -68,4 +68,6 @@ end
 service "php-fpm" do
   service_name('php5-fpm') if platform_family?('debian')
   action :enable
+  supports [:start, :restart, :stop]
+  provider Chef::Provider::Service::Upstart if (node["platform"] == "ubuntu" && node["platform_version"].to_f >= 9.10)
 end
