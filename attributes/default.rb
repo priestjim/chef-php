@@ -32,6 +32,7 @@ when 'rhel', 'fedora'
   default['php']['pear_dir']      = '/usr/share/pear'
   default['php']['session_dir']   = '/var/lib/php/session5'
   default['php']['upload_dir']    = '/var/lib/php/uploads'
+  default['php']['service_name']  = 'php-fpm'
 when 'debian'
   default['php']['conf_dir']      = '/etc/php5/cli'
   default['php']['apache_conf_dir'] = '/etc/php5/apache2'
@@ -40,6 +41,7 @@ when 'debian'
   default['php']['pear_dir']      = '/usr/share/php'
   default['php']['session_dir']   = '/var/lib/php5/session5'
   default['php']['upload_dir']    = '/var/lib/php5/uploads'
+  default['php']['service_name']  = 'php5-fpm'
 else
   default['php']['conf_dir']      = '/etc/php5/cli'
   default['php']['apache_conf_dir'] = '/etc/php5/apache2'
@@ -48,6 +50,7 @@ else
   default['php']['pear_dir']      = '/usr/share/php'
   default['php']['session_dir']   = '/var/lib/php5/session5'
   default['php']['upload_dir']    = '/var/lib/php5/uploads'
+  default['php']['service_name']  = 'php-fpm'
 end
 
 default['php']['secure_functions']['disable_functions'] = 'dl,posix_kill,posix_mkfifo,posix_setuid,proc_close,proc_open,proc_terminate,shell_exec,system,leak,posix_setpgid,posix_setsid,proc_get_status,proc_nice,show_source,virtual,proc_terminate,inject_code,define_syslog_variables,syslog,posix_uname'

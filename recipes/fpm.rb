@@ -66,7 +66,7 @@ end
 
 # Since we do not have any pool files we do not attempt to start the service
 service "php-fpm" do
-  service_name('php5-fpm') if platform_family?('debian')
+  node['php']['service_name']
   action :enable
   provider(Chef::Provider::Service::Upstart)if (platform?('ubuntu') && node['platform_version'].to_f >= 14.04)
 end
