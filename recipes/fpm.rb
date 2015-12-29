@@ -66,7 +66,7 @@ end
 
 # Since we do not have any pool files we do not attempt to start the service
 service "php-fpm" do
-  node['php']['service_name']
+  service_name node['php']['service_name']
   action :enable
   provider(Chef::Provider::Service::Upstart)if (platform?('ubuntu') && node['platform_version'].to_f >= 14.04)
 end
