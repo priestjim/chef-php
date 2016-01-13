@@ -6,6 +6,7 @@
 	notifempty
 	sharedscripts
 	delaycompress
+	su root root
 	postrotate
 		/bin/kill -SIGUSR1 `cat <%= node['php']['fpm_pidfile'] %> 2>/dev/null` 2>/dev/null || true
 	endscript
