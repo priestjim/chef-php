@@ -23,12 +23,12 @@
 if node['php']['use_atomic_repo']
   include_recipe 'yumrepo::atomic' if platform_family?('rhel')
 end
- 
+
 include_recipe 'apt' if platform_family?('debian')
 
 # Make sure the Apt cache is updated
 if platform_family?('debian')
-  resources(:execute => 'apt-get-update').run_action(:run)
+  resources(:execute => 'apt-get update').run_action(:run)
 end
 
 # Run the package installation at compile time
